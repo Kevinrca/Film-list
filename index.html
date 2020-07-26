@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Liste de film</title>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="logo">Liste de film</h1>
+        </header>
+
+        <main>
+            <div class="addMovie">
+                <form class="addMovieForm" onsubmit="addMovie(); return false;">
+                    <label for="titre">Titre du film</label>
+                    <div><input type="text" class="movieTitle"></div>
+
+                    <button type="submit">Ajouter</button>
+                </form>
+            </div>
+
+            <div class="movieListConteneur">
+                <h2>Films à voir</h2>
+                <ul class="movieList">
+                    <li>Votre film <button >Supprimer</button></li>
+                    <li>Votre film <button >Supprimer</button></li>
+                </ul>
+            </div>
+
+            <div class="movieListSeenConteneur">
+                <h2>Films vus</h2>
+                <ul class="movieListSeen">
+                    <li>Votre film</li>
+                    <li>Votre film</li>
+                </ul>
+            </div>
+
+
+            <script src="app.js"></script>
+        </main>
+    </body>
+</html>
