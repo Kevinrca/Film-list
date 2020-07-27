@@ -1,7 +1,8 @@
 let movieList = document.querySelector(".movieList");
 let movieListSeen = document.querySelector(".movieListSeen");
 
-let movieListArray = [];
+const movieListArray = [];
+const movieListSeenArray = [];
 
 
 
@@ -26,7 +27,6 @@ function addMovie () {
         document.querySelector(".movieTitle").value = "";   
     }
 
-
     if(movieList !== "") {
         
         // Enlever le texte "pas encore de film ajouté"
@@ -36,10 +36,7 @@ function addMovie () {
 
 
 
-
-
 function suppMovie (id) {
-    // Prendre l'index du film à supprimer
     let index = movieListArray.indexOf(id);
     
     // Supprimer le film de la liste HTML
@@ -54,7 +51,23 @@ function suppMovie (id) {
 function addToSeenMovie (id) {
     document.querySelector(".movieListSeenNoneText").style.display = "none";
 
-    movieListSeen.innerHTML += `<li>${id} <button id="${id}" onclick=suppMovie(this.id)>Supprimer</button>`;
+    // Ajouter le film dans la liste "Vu"
+    movieListSeenArray.push(movieListArray[movieListArray.indexOf(id)]);
+
+    console.log("Films vus " + movieListSeenArray);
+
+    movieListSeen.innerHTML += `<li>${id} <button id="${id}" onclick=suppMovieSeen(this.id)>Supprimer</button>`;
     suppMovie(id);
+}
+
+
+function suppMovieSeen (id) {
+    let index = movieListSeenArray.indexOf(id);
+    
+    // Supprimer le film de la liste HTML
+    document.getElementById(id).parentElement.outerHTML = "";
+
+    // supprimer le film de l'array
+    movieListSeenArray.splice(index, 1);
 }
 
