@@ -1,0 +1,113 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: rgb(34, 55, 68);
+    font-family: "Roboto", sans-serif;
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+
+
+header {
+    height: 60px;
+}
+.logo {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 1em;
+    font-weight: 400;
+}
+button {
+    padding: 8px 15px;
+
+    border: 2px white solid;
+    border-radius: 30px;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+
+    cursor: pointer;
+
+    background: none;
+
+    transition: all 0.2s ease;
+}
+button:hover {
+    background-color: rgb(30, 151, 221);
+}
+
+
+
+.addMovie {
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+
+    padding: 50px;
+    background-color: rgb(22, 46, 61);
+    border-radius: 20px;
+
+}
+.addMovie input {
+    padding: 5px 20px;
+    border-radius: 30px;
+    outline: none;
+
+    border: none;
+    
+    font-family: "Roboto", sans-serif;
+    color: rgb(22, 46, 61);
+    font-size: 1.2em;
+    font-weight: 500;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+.addMovie input:focus {
+    border: 3px rgb(30, 151, 221) solid;
+}
+
+
+
+
+
+
+
+.movieListConteneur {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+
+    padding: 50px;
+    background-color: rgb(22, 46, 61);
+    border-radius: 20px;
+}
+
+.movieListSeenConteneur {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+
+    padding: 50px;
+    background-color: rgb(22, 46, 61);
+    border-radius: 20px;
+}
