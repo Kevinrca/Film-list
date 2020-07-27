@@ -18,9 +18,14 @@ function addMovie () {
         movieListArray.push(movieTitle); 
         
         // ajouter un film avec un bouton suppr et un bouton vu
-        movieList.innerHTML += `<li>${movieListArray[movieListArray.indexOf(movieTitle)]}
-        <button id="${movieListArray[movieListArray.indexOf(movieTitle)]}" onclick=suppMovie(this.id)>Supprimer</button>
-        <button id="${movieListArray[movieListArray.indexOf(movieTitle)]}" onclick=addToSeenMovie(this.id)>Vu</button></li>`; 
+        movieList.innerHTML += 
+        `<div class="movieItem">
+            <h3>${movieListArray[movieListArray.indexOf(movieTitle)]}</h3>
+            <div class="movieItemButtons">
+                <button id="${movieListArray[movieListArray.indexOf(movieTitle)]}" onclick=addToSeenMovie(this.id)>Vu</button>
+                <button id="${movieListArray[movieListArray.indexOf(movieTitle)]}" onclick=suppMovie(this.id)>Supprimer</button>
+            </div>
+        </div>`; 
         
 
         // supprimer le texte dans le input
@@ -40,11 +45,13 @@ function suppMovie (id) {
     let index = movieListArray.indexOf(id);
     
     // Supprimer le film de la liste HTML
-    document.getElementById(id).parentElement.outerHTML = "";
+    document.getElementById(id).parentElement.parentElement.outerHTML = "";
 
     // supprimer le film de l'array
     movieListArray.splice(index, 1);
 }
+
+
 
 
 
@@ -56,16 +63,22 @@ function addToSeenMovie (id) {
 
     console.log("Films vus " + movieListSeenArray);
 
-    movieListSeen.innerHTML += `<li>${id} <button id="${id}" onclick=suppMovieSeen(this.id)>Supprimer</button>`;
+    movieListSeen.innerHTML += 
+    `<div class="movieItem">
+        <h3>${id}</h3>
+        <div class="movieItemButtons">
+            <button id="${id}" onclick=suppMovieSeen(this.id)>Supprimer</button>
+        </div>
+    </div>`;
+    
     suppMovie(id);
 }
-
 
 function suppMovieSeen (id) {
     let index = movieListSeenArray.indexOf(id);
     
     // Supprimer le film de la liste HTML
-    document.getElementById(id).parentElement.outerHTML = "";
+    document.getElementById(id).parentElement.parentElement.outerHTML = "";
 
     // supprimer le film de l'array
     movieListSeenArray.splice(index, 1);
@@ -73,6 +86,7 @@ function suppMovieSeen (id) {
 
 
 
+// Fonction de proposition de film aléatoire
 
 let movieRandom = document.querySelector(".randomMovie p");
 let movieRandomButton = document.querySelector(".randomMovieButton");
@@ -80,6 +94,11 @@ let movieRandomButton = document.querySelector(".randomMovieButton");
 movieRandomButton.addEventListener("click", () => {
     let randomNumber = Math.floor(Math.random() * movieListArray.length);
 
-    movieRandom.innerHTML = movieListArray[randomNumber];
+    if(movieListArray.length > 0) {
+        movieRandom.innerHTML = movieListArray[randomNumber];
+    }
+    else {
+        movieRandom.innerHTML = "Vous n'avez pas de film dans votre liste";
+    }
 });
 
