@@ -71,3 +71,15 @@ function suppMovieSeen (id) {
     movieListSeenArray.splice(index, 1);
 }
 
+
+
+
+let movieRandom = document.querySelector(".randomMovie p");
+let movieRandomButton = document.querySelector(".randomMovieButton");
+
+movieRandomButton.addEventListener("click", () => {
+    let randomNumber = Math.floor(Math.random() * movieListArray.length);
+
+    movieRandom.innerHTML = movieListArray[randomNumber];
+});
+
