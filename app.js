@@ -27,12 +27,11 @@ function addMovie () {
             </div>
         </div>`; 
         
-
         // supprimer le texte dans le input
         document.querySelector(".movieTitle").value = "";   
     }
 
-    if(movieList !== "") {
+    if(movieListArray.length !== 0) {
         
         // Enlever le texte "pas encore de film ajouté"
         document.querySelector(".movieListNoneText").style.display = "none";   

@@ -14,38 +14,43 @@
         </header>
 
         <main>
-            <div class="addMovie">
-                <h2>Ajouter un film</h2>
-                <form class="addMovieForm" onsubmit="addMovie(); return false;">
-                    <label for="titre">Titre du film</label>
-                    <div><input type="text" class="movieTitle"></div>
+            <div class="mainConteneur">
+                <div class="addMovie">
+                    <h2>Ajouter un film</h2>
+                    <form class="addMovieForm" onsubmit="addMovie(); return false;">
+                        <label for="titre">Titre du film</label>
+                        <div><input type="text" class="movieTitle"></div>
 
-                    <button type="submit">Ajouter</button>
-                </form>
+                        <button type="submit">Ajouter</button>
+                    </form>
+                </div>
+
+                <div class="randomMovie">
+                    <p>Votre film du jour</p>
+                    <button class="randomMovieButton">Film aléatoire</button>
+                </div>
             </div>
 
-            <div class="randomMovie">
-                <p>Film aléatoire</p>
-                <button class="randomMovieButton">Film aléatoire</button>
-            </div>
+            
+            <div class="movieConteneur">
+                <div class="movieListConteneur">
+                    <h2>Films à voir</h2>
+                    <p class="movieListNoneText">Pas encore de film ajouté</p>
+                    <ul class="movieList">
 
-            <div class="movieListConteneur">
-                <h2>Films à voir</h2>
-                <p class="movieListNoneText">Pas encore de film ajouté</p>
-                <ul class="movieList">
+                    </ul>
+                </div>
+
+                <div class="movieListSeenConteneur">
+                    <h2>Films vus</h2>
+                    <p class="movieListSeenNoneText">Pas encore de film vu</p>
+                    <ul class="movieListSeen">
                     
-
-                </ul>
+                    </ul>
+                </div>
             </div>
 
-            <div class="movieListSeenConteneur">
-                <h2>Films vus</h2>
-                <p class="movieListSeenNoneText">Pas encore de film vu</p>
-                <ul class="movieListSeen">
-                    
-
-                </ul>
-            </div>
+            
 
 
             <script src="app.js"></script>

@@ -9,8 +9,8 @@ body {
     background-color: rgb(34, 55, 68);
     font-family: "Roboto", sans-serif;
     color: white;
-    width: 80%;
     margin: auto;
+    width: 80%;
 }
 
 
@@ -53,27 +53,55 @@ button {
 }
 button:hover {
     background-color: rgb(30, 151, 221);
+    border: 2px rgb(30, 151, 221) solid;
 }
 
 
 
 
-.addMovie {
+.mainConteneur {
     width: 80%;
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 30px;
 
     padding: 50px;
     background-color: rgb(22, 46, 61);
     border-radius: 20px;
 
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
 }
+
+
+
+.addMovie {
+    width: 100%;
+
+    padding: 50px;
+    background-color: rgb(18, 37, 49);
+    border-radius: 20px;
+
+}
+.addMovie form {
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.addMovie label {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
 .addMovie input {
     padding: 5px 20px;
     border-radius: 30px;
     outline: none;
 
-    border: none;
+    width: 50%;
+
+    border: 3px rgb(18, 37, 49) solid; 
     
     font-family: "Roboto", sans-serif;
     color: rgb(22, 46, 61);
@@ -83,6 +111,8 @@ button:hover {
     margin-top: 10px;
     margin-bottom: 20px;
 
+    transition: all 0.2s ease;
+
 }
 .addMovie input:focus {
     border: 3px rgb(30, 151, 221) solid;
@@ -90,12 +120,13 @@ button:hover {
 
 
 .randomMovie {
-    width: 80%;
-    margin: auto;
-    margin-top: 30px;
+    width: 40%;
+    height: 200px;
+
+    margin-left: 30px;
 
     padding: 50px;
-    background-color: rgb(22, 46, 61);
+    background-color: rgb(18, 37, 49);
     border-radius: 20px;
 
     display: flex;
@@ -107,7 +138,7 @@ button:hover {
 {
     display: block;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 
     font-size: 1.2em;
 }
@@ -116,17 +147,50 @@ button:hover {
 
 
 
+.movieConteneur {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 100px; 
+
+    padding: 50px ;
+    background-color: rgb(22, 46, 61);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+}
+
 
 
 .movieListConteneur {
-    width: 80%;
-    margin: auto;
-    margin-top: 30px;
+    min-height: 200px;
+    
+    padding: 50px;
+    background-color: rgb(18, 37, 49);
+    border-radius: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.movieListSeenConteneur {
+    min-height: 200px;
 
     padding: 50px;
-    background-color: rgb(22, 46, 61);
+    background-color: rgb(18, 37, 49);
     border-radius: 20px;
+
 }
+
+
+
+
+
 .movieItem {
     width: 95%;
     height: 60px;
@@ -140,7 +204,7 @@ button:hover {
     align-items: center;
     justify-content: space-between;
 
-    background-color: rgb(31, 87, 124);
+    background-color: rgb(34, 86, 119);
 }
 .movieItem h3 {
     font-size: 1.2em;
@@ -154,14 +218,6 @@ button:hover {
 
 
 
-.movieListSeenConteneur {
-    width: 80%;
-    margin: auto;
-    margin-top: 30px;
-
-    padding: 50px;
-    background-color: rgb(22, 46, 61);
-    border-radius: 20px;
-
-    margin-bottom: 200px;
+.movieListNoneText, .movieListSeenNoneText {
+    margin-left: 20px;
 }
