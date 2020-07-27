@@ -49,7 +49,7 @@ button {
 
     background: none;
 
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
 }
 button:hover {
     background-color: rgb(30, 151, 221);
@@ -74,7 +74,9 @@ button:hover {
     justify-content: space-between;
 }
 
-
+/*  --------------------------------------------------------------------  */
+/*  ----------------------- Ajouter un film ----------------------------  */
+/*  --------------------------------------------------------------------  */
 
 .addMovie {
     width: 100%;
@@ -95,7 +97,7 @@ button:hover {
 }
 
 .addMovie input {
-    padding: 5px 20px;
+    padding: 5px 15px;
     border-radius: 30px;
     outline: none;
 
@@ -117,6 +119,10 @@ button:hover {
 .addMovie input:focus {
     border: 3px rgb(30, 151, 221) solid;
 }
+
+/*  --------------------------------------------------------------------  */
+/*  ------------------------ Film aléatoire ----------------------------  */
+/*  --------------------------------------------------------------------  */
 
 
 .randomMovie {
@@ -144,7 +150,9 @@ button:hover {
 }
 
 
-
+/*  --------------------------------------------------------------------  */
+/*  -------------------------- Liste de film ---------------------------  */
+/*  --------------------------------------------------------------------  */
 
 
 .movieConteneur {
@@ -165,7 +173,9 @@ button:hover {
 
 }
 
-
+/*  --------------------------------------------------------------------  */
+/*  ---------------------- Liste de film à voir ------------------------  */
+/*  --------------------------------------------------------------------  */
 
 .movieListConteneur {
     min-height: 200px;
@@ -177,6 +187,9 @@ button:hover {
     margin-bottom: 30px;
 }
 
+/*  --------------------------------------------------------------------  */
+/*  ------------------------ Liste de film vus -------------------------  */
+/*  --------------------------------------------------------------------  */
 
 .movieListSeenConteneur {
     min-height: 200px;
@@ -188,7 +201,9 @@ button:hover {
 }
 
 
-
+/*  --------------------------------------------------------------------  */
+/*  ------------------------ Conteneur de film -------------------------  */
+/*  --------------------------------------------------------------------  */
 
 
 .movieItem {
@@ -204,16 +219,35 @@ button:hover {
     align-items: center;
     justify-content: space-between;
 
-    background-color: rgb(34, 86, 119);
+    background-color: rgb(22, 46, 61);
+
+    transition: all 0.1s ease;
 }
+.movieItem:hover {
+    cursor: pointer;
+    background-color: rgb(37, 93, 128);
+}
+
+
+.movieItemButtons button
+{
+    display: none;
+    font-size: 1em;
+
+}
+
+.movieItem:hover button {
+    display: inline;
+}
+
+
+
 .movieItem h3 {
     font-size: 1.2em;
     font-weight: 500;
 }
-.movieItemButtons button
-{
-    font-size: 1em;
-}
+
+
 
 
 
