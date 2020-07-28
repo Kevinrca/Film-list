@@ -6,9 +6,9 @@
 }
 
 body {
-    background-color: rgb(34, 55, 68);
+    background-color: rgb(255, 255, 255);
     font-family: "Roboto", sans-serif;
-    color: white;
+    color: rgb(24, 24, 24);
     margin: auto;
     width: 80%;
 }
@@ -36,13 +36,13 @@ p {
 button {
     padding: 8px 15px;
 
-    border: 2px white solid;
-    border-radius: 30px;
+    border: none;
+    border-radius: 10px;
 
     font-family: "Roboto", sans-serif;
     font-size: 1em;
     font-weight: 500;
-    color: white;
+    color: rgb(48, 48, 48);
 
     outline: none;
     cursor: pointer;
@@ -52,26 +52,25 @@ button {
     transition: all 0.1s ease;
 }
 button:hover {
-    background-color: rgb(30, 151, 221);
-    border: 2px rgb(30, 151, 221) solid;
+    background-color: rgb(224, 224, 224);
+    
 }
 
 
 
 
 .mainConteneur {
-    width: 80%;
+    width: 86%;
     margin-right: auto;
     margin-left: auto;
     margin-top: 30px;
 
-    padding: 50px;
-    background-color: rgb(22, 46, 61);
+    background-color: rgb(206, 206, 206);
     border-radius: 20px;
 
     display: flex;
     align-items: stretch;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 /*  --------------------------------------------------------------------  */
@@ -79,46 +78,56 @@ button:hover {
 /*  --------------------------------------------------------------------  */
 
 .addMovie {
-    width: 100%;
+    width: 70%;
+    background-color: rgb(243, 243, 243);
 
-    padding: 50px;
-    background-color: rgb(18, 37, 49);
-    border-radius: 20px;
+    border-radius: 20px 0px 0px 20px;
 
 }
+.addMovie h2 {
+    
+    padding: 15px 25px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 20px 0px 0px 0px;
+    color: rgb(238, 151, 20);
+    font-weight: 700;
+}
+
 .addMovie form {
+    padding-left: 50px;
     margin-left: 30px;
     margin-top: 40px;
 }
 .addMovie label {
-    font-size: 1.1em;
-    font-weight: 400;
+    font-size: 1.2em;
+    font-weight: 500;
     margin-left: 10px;
 }
-
 .addMovie input {
-    padding: 5px 15px;
-    border-radius: 30px;
+    padding: 8px 15px;
+    border-radius: 12px;
     outline: none;
+    background-color: rgb(255, 255, 255);
 
-    width: 50%;
+    border: none;
 
-    border: 3px rgb(18, 37, 49) solid; 
+    width: 60%;
     
     font-family: "Roboto", sans-serif;
     color: rgb(22, 46, 61);
-    font-size: 1.2em;
-    font-weight: 500;
+    font-size: 1.1em;
+    font-weight: 400;
 
     margin-top: 10px;
     margin-bottom: 20px;
 
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
 
 }
 .addMovie input:focus {
-    border: 3px rgb(30, 151, 221) solid;
+    border: 2px rgb(230, 159, 54) solid;
 }
+
 
 /*  --------------------------------------------------------------------  */
 /*  ------------------------ Film aléatoire ----------------------------  */
@@ -127,26 +136,44 @@ button:hover {
 
 .randomMovie {
     width: 40%;
-    height: 200px;
+    height: 250px;
 
-    margin-left: 30px;
-
-    padding: 50px;
-    background-color: rgb(18, 37, 49);
-    border-radius: 20px;
-
+    background-color: rgb(230, 230, 230);
+    border-radius: 0px 20px 20px 0px;
+}
+.randomMovie div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    margin-top: 8%;
 }
+.randomMovie h2 {
+    padding: 15px 25px;
+
+    background-color: rgb(221, 221, 221);
+    border-radius: 0px 20px 0px 0px;
+    color: rgb(22, 171, 230);
+    font-weight: 700;
+}
+
 .randomMovie p
 {
-    display: block;
-    padding: 10px;
-    margin-bottom: 30px;
+    height: 30px;
+    width: 80%;
+    padding: 10px 15px 2px 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
 
-    font-size: 1.2em;
+    text-align: center;
+
+    background-color: white;
+
+    font-size: 1.1em;
+}
+.randomMovie button:hover {
+    background-color: rgb(209, 209, 209);
 }
 
 
@@ -156,14 +183,12 @@ button:hover {
 
 
 .movieConteneur {
-    width: 80%;
+    width: 86%;
     margin-right: auto;
     margin-left: auto;
     margin-top: 30px;
     margin-bottom: 100px; 
 
-    padding: 50px ;
-    background-color: rgb(22, 46, 61);
     border-radius: 20px;
 
     display: flex;
@@ -179,12 +204,20 @@ button:hover {
 
 .movieListConteneur {
     min-height: 200px;
+    padding-bottom: 50px;
     
-    padding: 50px;
-    background-color: rgb(18, 37, 49);
-    border-radius: 20px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 20px 20px 0px 0px;
 
-    margin-bottom: 30px;
+}
+.movieListConteneur h2 {
+    padding: 15px 25px;
+    color: rgb(219, 51, 107);
+    font-weight: 700;
+    
+    background-color: rgb(218, 218, 218);
+    border-radius: 20px 20px 0px 0px;
+    
 }
 
 /*  --------------------------------------------------------------------  */
@@ -193,11 +226,19 @@ button:hover {
 
 .movieListSeenConteneur {
     min-height: 200px;
+    padding-bottom: 50px;
 
-    padding: 50px;
-    background-color: rgb(18, 37, 49);
-    border-radius: 20px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 0px 0px 20px 20px;
 
+}
+.movieListSeenConteneur h2 {
+    padding: 15px 25px;
+    color: rgb(25, 180, 64);
+    font-weight: 700;
+    
+    background-color: rgb(218, 218, 218);
+    
 }
 
 
@@ -207,37 +248,45 @@ button:hover {
 
 
 .movieItem {
-    width: 95%;
+    width: 90%;
     height: 60px;
     margin: auto;
     margin-bottom: 10px;
-    padding: 5px 20px 5px 30px;
+    padding: 0px 20px 0px 20px;
 
-    border-radius: 40px;
+    border-radius: 15px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background-color: rgb(22, 46, 61);
+    background-color: rgb(255, 255, 255);
 
     transition: all 0.1s ease;
 }
 .movieItem:hover {
     cursor: pointer;
-    background-color: rgb(37, 93, 128);
+    color: white;
+    background-color: rgb(238, 94, 142);
 }
-
+.movieListSeen div:hover {
+    background-color: rgb(55, 165, 82);
+}
 
 .movieItemButtons button
 {
     display: none;
     font-size: 1em;
+    color: white;
 
+}
+.movieItemButtons button:hover {
+    background-color: rgba(206, 206, 206, 0.5);
 }
 
 .movieItem:hover button {
     display: inline;
+    
 }
 
 
