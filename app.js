@@ -22,8 +22,8 @@ function addMovie () {
         `<div class="movieItem">
             <h3>${movieListArray[movieListArray.indexOf(movieTitle)]}</h3>
             <div class="movieItemButtons">
-                <button id="${movieListArray[movieListArray.indexOf(movieTitle)]}" onclick=addToSeenMovie(this.id)>Vu</button>
-                <button id="${movieListArray[movieListArray.indexOf(movieTitle)]}" onclick=suppMovie(this.id)>Supprimer</button>
+                <img src="images/icones/checkmark.png" id="${movieListArray[movieListArray.indexOf(movieTitle)]}" onclick=addToSeenMovie(this.id)>
+                <img src="images/icones/poubelle.png" id="${movieListArray[movieListArray.indexOf(movieTitle)]}" onclick=suppMovie(this.id)>
             </div>
         </div>`; 
         
@@ -66,7 +66,7 @@ function addToSeenMovie (id) {
     `<div class="movieItem">
         <h3>${id}</h3>
         <div class="movieItemButtons">
-            <button id="${id}" onclick=suppMovieSeen(this.id)>Supprimer</button>
+            <img src="images/icones/poubelle.png" id="${id}" onclick=suppMovieSeen(this.id)>
         </div>
     </div>`;
     

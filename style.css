@@ -273,20 +273,24 @@ button:hover {
     background-color: rgb(55, 165, 82);
 }
 
-.movieItemButtons button
-{
-    display: none;
-    font-size: 1em;
-    color: white;
 
+.movieItemButtons img {
+    height: 26px;
+    padding: 8px;
+    border-radius: 10px;
+    opacity: 0;
+    margin: 3px;
+
+    transition: all 0.1s ease;
 }
-.movieItemButtons button:hover {
+
+
+.movieItemButtons img:hover {
     background-color: rgba(206, 206, 206, 0.5);
 }
 
-.movieItem:hover button {
-    display: inline;
-    
+.movieItem:hover img {
+    opacity: 0.9;;
 }
 
 
