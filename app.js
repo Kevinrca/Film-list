@@ -5,6 +5,31 @@ const movieListArray = [];
 const movieListSeenArray = [];
 
 
+// Afficher la liste des films dans le localStorage
+function movieListInitialisation() {
+    for(let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    movieListArray.push(localStorage.getItem(key));
+
+    movieList.innerHTML += 
+        `<div class="movieItem">
+            <h3>${movieListArray[movieListArray.indexOf(key)]}</h3>
+            <div class="movieItemButtons">
+                <img src="images/icones/checkmark.png" id="${movieListArray[movieListArray.indexOf(key)]}" onclick=addToSeenMovie(this.id)>
+                <img src="images/icones/poubelle.png" id="${movieListArray[movieListArray.indexOf(key)]}" onclick=suppMovie(this.id)>
+            </div>
+        </div>`;
+    }
+    if(movieListArray.length !== 0) {
+        document.querySelector(".movieListNoneText").style.display = "none";
+    }
+}
+
+movieListInitialisation();
+
+
+
+
 
 function addMovie () {
     const movieTitle = document.querySelector(".movieTitle").value;
@@ -15,6 +40,7 @@ function addMovie () {
     }
     else { 
         // Mettre de film dans l'array
+        localStorage.setItem(movieTitle, movieTitle);
         movieListArray.push(movieTitle); 
         
         // ajouter un film avec un bouton suppr et un bouton vu
@@ -46,6 +72,8 @@ function suppMovie (id) {
     // Supprimer le film de la liste HTML
     document.getElementById(id).parentElement.parentElement.outerHTML = "";
 
+    localStorage.removeItem(id);
+
     // supprimer le film de l'array
     movieListArray.splice(index, 1);
 }
@@ -59,8 +87,6 @@ function addToSeenMovie (id) {
 
     // Ajouter le film dans la liste "Vu"
     movieListSeenArray.push(movieListArray[movieListArray.indexOf(id)]);
-
-    console.log("Films vus " + movieListSeenArray);
 
     movieListSeen.innerHTML += 
     `<div class="movieItem">
