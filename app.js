@@ -111,7 +111,7 @@ function suppMovieSeen (id) {
 
 
 
-// Proposition de film aléatoire
+// Proposition de film aléatoire 
 
 let movieRandom = document.querySelector(".randomMovie p");
 let movieRandomButton = document.querySelector(".randomMovieButton");
